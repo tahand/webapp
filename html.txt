@@ -1,0 +1,22 @@
+Colour schemes
+https://www.w3schools.com/colors/colors_palettes.asp
+
+CSS variables
+https://www.w3schools.com/css/css3_variables.asp
+
+Fixed sidebar
+https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+
+Aside vs Sidebar - difference
+https://aastudio.fr/sidebar-and-aside-are-different
+
+Aside
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_aside2
+
+Anchor tags to sections of the page
+https://mimo.org/glossary/html/anchor-tag
+
+
+Sticky footers
+https://developer.mozilla.org/en-US/docs/Web/CSS/How_to/Layout_cookbook/Sticky_footers
+
