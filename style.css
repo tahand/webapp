@@ -20,6 +20,7 @@
 body {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+    margin: 0px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -29,7 +30,7 @@ header {
 
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0px;
     left: 0px;
 
@@ -40,7 +41,7 @@ header {
 div.main {
     margin-left: 200px;
     margin-right: 100px;
-    margin-top: 70px;
+    margin-top: 170px;
 }
 
 footer {
@@ -48,7 +49,18 @@ footer {
     color: var(--footer-text-color);
     text-align: center;
     padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
 }
+
+@supports (position:sticky) {
+    footer {
+        position: sticky;
+    }
+}
+
 
 aside {
   width: 30%;
@@ -70,13 +82,54 @@ section {
     border-radius: 6px;
 }
 
+.main-content {
+    margin-top: 50px;
+}
+
 div.sidebar {
-    width: 130px;
+    width: 260px;
     position: fixed;
     z-index: 1;
     top: 50px;
     left: 10px;
-    background: #eee;
     overflow-x: hidden;
     padding: 8px 0;
+}
+
+
+li {
+    width: 200px;
+    margin: 5px 0px;
+    border-radius: 0px 5px 5px 0px;
+    padding: 3px 0px;
+}
+
+li:hover {
+    background-color: var(--color-five);
+}
+
+li:hover a {
+    color: var(--color-one);
+    padding-left: 5px;
+}
+
+@media (max-width: 500px) {
+
+    body {font-size: 20px;}
+
+    div.sidebar {
+        position:relative;
+        width: 100%;
+    }
+
+    div.main {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+
+    aside {
+        font-size: 16px;
+    }
+
 }
