@@ -104,6 +104,12 @@ li {
     padding: 3px 0px;
 }
 
+img.header_image {
+    width:100%;
+    max-height:250px;
+    object-fit: cover;
+}
+
 li:hover {
     background-color: var(--color-five);
 }
