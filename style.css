@@ -175,6 +175,7 @@ li:hover a {
     /* display:grid; */
     grid-template-columns: auto auto;
     max-width: 600px;
+    width: 50%;
     overflow-x: hidden;
     gap: 10px;
     position: fixed;
