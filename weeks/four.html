@@ -1,0 +1,270 @@
+<html>
+
+<head>
+    <title>WebApp</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <header>&nbsp;</header>
+    <div class="sidebar">
+        <ul id="navigation_menu">
+            <li><a href="../">Main Menu</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <h1>Web forms</h1>
+
+        <div id="form-review"></div>
+
+        <section id="javascript_dynamic_form">
+            <h2>Javascript dynamic form</h2>
+            <p id="form_progress_text">&nbsp;</p>
+            <form id="dynamic" action="">
+
+                <fieldset id="fieldset_1">
+                    <label for="fname">First name:</label>
+                    <input id="fname" maxlength="20" name="fname" type="text" placeholder="First name..." required>
+
+                    <label for="surname">Surname:</label>
+                    <input id="surname" maxlength="20" name="surname" type="text" placeholder="Surname..." required>
+                </fieldset>
+
+                <fieldset id="fieldset_2">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" required>
+                </fieldset>
+
+                <fieldset id="fieldset_3">
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" maxlength="50" name="email" placeholder="Email..." required>
+                </fieldset>
+
+                <fieldset id="fieldset_4">
+                    <p>Whats your favourite language?</p>
+                    <input type="radio" id="html" name="fav_lang" value="HTML">
+                    <label for="html">HTML</label>
+                    <input type="radio" id="css" name="fav_lang" value="CSS">
+                    <label for="css">CSS</label>
+                    <input type="radio" id="javascript" name="fav_lang" value="Javascript">
+                    <label for="javascript">Javascript</label>
+                </fieldset>
+
+                <fieldset id="fieldset_5">
+                    <!--Next question-->
+                    <p>Which method of transport are available to you?</p>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1">Bike</label>
+                    <input type="checkbox" id="vehicle2" name="vehicle1" value="Car">
+                    <label for="vehicle2">Car</label>
+                    <input type="checkbox" id="vehicle3" name="vehicle1" value="Tram">
+                    <label for="vehicle3">Tram</label>
+                    <input type="checkbox" id="vehicle4" name="vehicle1" value="Bus">
+                    <label for="vehicle4">Bus</label>
+                </fieldset>
+
+                <fieldset id="fieldset_6">
+                    <p for="drinks">Which drink do you prefer when working:</p>
+                    <select id="drinks" name="drinks" required>
+                        <option value=""></option>
+                        <option value="Cea">Tea</option>
+                        <option value="Coffee">Coffee</option>
+                        <option value="Water">Water</option>
+                        <option value="Pop">Pop</option>
+                    </select>
+                </fieldset>
+                
+                <fieldset id="fieldset_7">
+                    <p>What browser are you using?</p>
+                    <input list="browsers" name="browsers" required>
+                    <datalist id="browsers">
+                        <option value="Edge">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                    </datalist>
+                </fieldset>
+
+                <fieldset id="fieldset_8">
+                    <p>Is there anything else you'd like to discuss?</p>
+                    <textarea id="further_comments" name="further_comments"></textarea>
+                </fieldset>
+
+                <button id="button_reset" type="reset">Reset</button>
+
+                <input id="dynamic_form_submit" type="submit">
+
+            </form>
+
+        </section>
+
+        <section id="creating-the-form">
+            <h2>Creating the form</h2>
+            <p>The basic form template has been created and includes a submit button with an <b>action</b> value of ""
+                which means the form will submit back to itself.</p>
+            <p>I have focused on getting the content there initially and included a selection of different input types.
+            </p>
+        </section>
+
+        <section id="submitting-the-form">
+            <h2>Submitting the form</h2>
+            <p>The URL that it posts back to is the same page but with query string values of the form name and value
+                that has been submitted.
+                <br>
+                <br>
+                <span urlpart="url">http://127.0.0.1:5500/weeks/four.html</span>
+                <span urlpart="separator">?</span>
+                <span urlpart="key">fname</span>
+                <span urlpart="operator">=</span>
+                <span urlpart="value">Andrew</span>
+                <span urlpart="key-value-separator">&</span>
+                <span urlpart="key">surname</span>
+                <span urlpart="operator">=</span>
+                <span urlpart="value">Chapman</span>
+                <span urlpart="key-value-separator">&</span>
+                <span urlpart="key">fav_lang</span>
+                <span urlpart="operator">=</span>
+                <span urlpart="value">HTML</span>
+                <span urlpart="key-value-separator">&</span>
+                <span urlpart="key">vehicle1</span>
+                <span urlpart="operator">=</span>
+                <span urlpart="value">Bike</span>
+
+                <br>
+            <h3>Key</h3>
+            <div class="key" urlpart="url">URL</div>
+            <div class="key" urlpart="separator">URL and query string separator</div>
+            <div class="key" urlpart="key">Key</div>
+            <div class="key" urlpart="operator">Key/Value operator</div>
+            <div class="key" urlpart="value">Value</div>
+            <div class="key" urlpart="key-value-separator">Key/Value pair separator</div>
+            </p>
+        </section>
+
+        <section id="updating_css">
+            <h2>Updating my CSS file to style the form</h2>
+            <p>The references sections includes hyperlinks that are too long for the viewport on mobile devices.
+                <br>To correct this I set:
+                <br><i>overflow-x: none;</i>
+                <br><i>overflow-wrap: break-word;</i>
+                <br>This prevents the text from overflowing outside the boundaries of the section element and allows it
+                to wrap onto the lines below.
+            </p>
+        </section>
+
+
+        <section id="javascript_dynamic_menu">
+            <h2>Javascript dynamic menu</h2>
+            <p>I created a dynamicaly generated menu.</p>
+            <p>When the page loads a Javascript function is called that will use the document.getElementByTagName to find all the sections.</p>
+            <p>I then looped through the element object that this returned and built an array of values made up of the section id (key) and the innerText of the h2 element within this section.
+                <br>The array is looped through and the key and values are use to build up li elements and add them to the ol element within the navigatoin menu.   
+            </p>
+            <p>The result is a navigation menu that dynamically builds up the menu items based on the sections of the web page and will reduce the chances of having broken links on the page or mismatched links to sections that could result from human error.
+            </p>
+        </section>
+
+
+        <section id="references">
+            <h2>References</h2>
+            <div></div>
+            <div>W3Schools (N.A.), Query String, https://www.w3schools.com/tools/tool_query_string.php</div>
+            <div>W3Schools (N.A.), Prop node innerText, https://www.w3schools.com/jsref/prop_node_innertext.asp</div>
+            <div>Stackoverflow (N.A.), Javascript Creae and li element and append to ol, https://stackoverflow.com/questions/9107541/javascript-to-create-an-li-and-append-to-an-ol</div>
+            <div>W3Schools (N.A.), Create Element, https://www.w3schools.com/jsref/met_document_createelement.asp</div>
+            <div>W3Schools (N.A.), HTML form input, https://www.w3schools.com/html/html_form_input_types.asp</div>
+            <div>W3Schools (N.A.), Push button disabled, https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp</div>
+            <div>Stackoverflow (N.A.), Querstring values in Javascript, https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript</div>
+
+        </section>
+
+    </div>
+
+    <footer>Last updated 18/09/2026</footer>
+
+
+    <script>
+        // this will run last when the required page components are rendered
+        function createSubMenu() {
+            // script to search through the document for each section and 
+            // get the id and h2 title of each for the menu
+
+            sections = [];
+
+            //get section elements and convert to an array to loop through
+            Array.from(document.getElementsByTagName("section")).forEach(section => {
+                //get the id to identify the section element
+                elementID = section.id
+                //get the h2 element from within this section
+                title = section.getElementsByTagName("h2")[0].innerText
+
+                sections.push({ "href": elementID, "title": title })
+
+            });
+
+            //get the menu list element 
+            navMenu = document.getElementById("navigation_menu")
+            
+            // loop through the array
+            sections.map(section => {
+                // create li and a element objects
+                newItem = document.createElement("li")
+                newATag = document.createElement("a")
+
+                // set a element values
+                newATag.href = "#" + section.href   //adding # for an internal link
+                newATag.innerText = section.title
+
+                newItem.appendChild(newATag)    //add a element to li
+                navMenu.appendChild(newItem)    //add li to menu
+
+            })
+        }
+
+
+        function checkForm(){
+            let querystring = window.location.search;
+            //remove the first character which is ?
+            querystring = querystring.substring(1, querystring.length)     
+            querystring = decodeURI(querystring)
+            key_value_array = querystring.split("&")
+            
+            let form_values = key_value_array.map(k_v=>{
+                [key, value] = k_v.split("=");
+                return {"key":key, "value":value}
+            })
+
+            
+            if (form_values[0].value ===undefined) return;
+
+            const html_review = document.getElementById("form-review")
+            form_values.forEach((rec=>{
+                html_key = document.createElement("div")
+                html_key.innerText = rec.key
+                html_key.classList.add("review-key");
+
+                html_value = document.createElement("div")
+                html_value.innerText = rec.value
+                html_value.classList.add("review-value");
+
+                html_review.appendChild(html_key)
+                html_review.appendChild(html_value)
+            }))
+            
+            html_review.style.display = "grid";
+        }
+
+        createSubMenu();
+        checkForm();
+
+    </script>
+
+</body>
+
+</html>
