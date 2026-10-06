@@ -1,0 +1,28 @@
+-----------------
+Description
+-----------------
+Create a daily timeblocking/schedule to plan each day.
+The daily planner will connect to a weather api to bring up to date weather status for the users location.
+The daily planner data will store the data locally so that it can function offline.
+An additional pomodoro timer will be available to configure a set time to countdown to.
+
+-----------------
+Steps
+-----------------
+At each step of development run scores for speed, accessibility and 
+
+[] Create web template
+[] Link basic css page with colour scheme and fonts
+[] Create template of the daily schedule
+[] Find weather api
+[] Find geolocation (error trap for security restrictions of api not available), allow for manual input if location can't be found or manual overwrite
+[] Connect to weather api
+[] Display weather component
+[] 
+
+
+
+------------------
+Grid style sheet
+2 colums - small square for the hour - then the rest for the content
+24 rows for each hour

@@ -1,0 +1,14 @@
+/* variables */
+
+
+/* styles */
+body {
+
+}
+
+#schedule-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: dodgerblue;
+    padding: 10px;
+}

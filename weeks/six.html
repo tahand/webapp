@@ -1,0 +1,253 @@
+<html>
+
+<head>
+    <title>WebApp</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function(){
+            
+            
+                
+                $("#halloween-button").click(function(){
+                    setTimeout(()=>{ 
+                        $("body").css("background-color", "orange");
+                        $("p").css("color", "orange");
+                        $("li").css("background-color", "green");
+                        $("li").css("color", "white");
+                        $("li").css("padding", "5px");
+                        $("li a").css("color", "white");
+                        $(".tab-selector").css("color", "white");
+                        $(".tab-selector").css("background-color", "green");
+                        $("section").css("background-color", "white");
+                        $("section").css("color", "orange");
+                    },  100);
+
+                });
+
+
+
+
+
+            // let p = $("p");
+            // console.log(p);
+        }); 
+    </script>
+    <header>&nbsp;</header>
+    <div class="sidebar">
+        <ul id="navigation_menu">
+            <li><a href="../">Main Menu</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <h1></h1>
+
+        <div id="form-review"></div>
+        <button id="halloween-button">Halloweeeeeeeen</button>
+        <div class="column-section-container">
+            <section id="javascript_dynamic_form">
+                <h2>Lets get to know you...</h2>
+                <p id="form_progress_text">&nbsp;</p>
+                <form id="dynamic_form" action="">
+
+                    <div id="form_tab_buttons"></div>
+
+                    <fieldset id="fieldset_1" tabName="Basic Details">
+                        <label for="fname">First name:</label>
+                        <input id="fname" maxlength="20" name="fname" type="text" placeholder="First name..." required>
+
+                        <label for="surname">Surname:</label>
+                        <input id="surname" maxlength="20" name="surname" type="text" placeholder="Surname..." required>
+                    </fieldset>
+
+                    <fieldset id="fieldset_2" tabName="Date of birth">
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" required>
+                    </fieldset>
+
+                    <fieldset id="fieldset_3" tabName="Email">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" maxlength="50" name="email" placeholder="Email..." required>
+                    </fieldset>
+
+                    <fieldset id="fieldset_4" tabName="Languages">
+                        <p>Whats your favourite language?</p>
+                        <input type="radio" id="html" name="fav_lang" value="HTML">
+                        <label for="html">HTML</label>
+                        <input type="radio" id="css" name="fav_lang" value="CSS">
+                        <label for="css">CSS</label>
+                        <input type="radio" id="javascript" name="fav_lang" value="Javascript">
+                        <label for="javascript">Javascript</label>
+                    </fieldset>
+
+                    <fieldset id="fieldset_5" tabName="Transport">
+                        <!--Next question-->
+                        <p>Which method of transport are available to you?</p>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1">Bike</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle1" value="Car">
+                        <label for="vehicle2">Car</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle1" value="Tram">
+                        <label for="vehicle3">Tram</label>
+                        <input type="checkbox" id="vehicle4" name="vehicle1" value="Bus">
+                        <label for="vehicle4">Bus</label>
+                    </fieldset>
+
+                    <fieldset id="fieldset_6" tabName="Drink">
+                        <p for="drinks">Which drink do you prefer when working:</p>
+                        <select id="drinks" name="drinks" required>
+                            <option value=""></option>
+                            <option value="Tea">Tea</option>
+                            <option value="Coffee">Coffee</option>
+                            <option value="Water">Water</option>
+                            <option value="Pop">Pop</option>
+                        </select>
+                    </fieldset>
+                    
+                    <fieldset id="fieldset_7" tabName="Browsers">
+                        <p>What browser are you using?</p>
+                        <input list="browsers" name="browsers" required>
+                        <datalist id="browsers">
+                            <option value="Edge">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+                    </fieldset>
+
+                    <fieldset id="fieldset_8" tabName="Comments">
+                        <p>Is there anything else you'd like to discuss?</p>
+                        <textarea id="further_comments" name="further_comments"></textarea>
+                    </fieldset>
+
+                    <button id="button_reset" type="reset">Reset</button>
+
+                    <input id="dynamic_form_submit" type="submit">
+
+                </form>
+
+            </section>
+
+            <section id="quotes_section">
+                <h2>Quotes</h2>
+                <p id="quote-value"></p>
+                <span id="quote_author"></span>
+                <div id="quote-menu-options">
+                    <div id="quote-selector-container">
+                        <div id="prev_selector" quote_status="disabled" onclick="updatePage(-1);">Prev</div>
+                        <div id="selector_page_details"></div>
+                        <div id="next_selector" quote_status="disabled" onclick="updatePage(1)">Next</div>
+                    </div>
+                    <div id="clear-local-cache" onClick="clearLocalCache();">[Refresh]</div>
+                </div>
+                <script>
+                    let quotes_list = [];
+                    let quote_index = 0;
+
+                    async function getQuotes(){
+                        
+                        await fetch("https://api.freeapi.app/api/v1/public/quotes/", {
+                            method:"get",
+                            headers: {
+                                "Accept":"application/json"
+                            }
+                        })
+                        .then(async (response)=>{
+                            const result = await response.json();
+                            quotes = result.data.data;
+                            localStorage.setItem("quotes_list", JSON.stringify(quotes));
+                            getDisplayQuotes();
+                        })
+                        .catch(e=>console.log(e));
+
+                    }
+
+                    function show_quotes(quotes_string){
+                        
+                        try {
+                            quotes_list = JSON.parse(quotes_string);
+                            
+                            const quote_text_object = document.getElementById("quote-value");
+                            const quote_author_object = document.getElementById("quote_author");
+
+                            quote_text_object.innerHTML = quotes_list[quote_index].content;
+                            quote_author_object.innerHTML = quotes_list[quote_index].author;
+                                                    
+                            // disable previous and next
+                            document.getElementById("prev_selector").setAttribute("quote_status", "disabled"); 
+                            document.getElementById("next_selector").setAttribute("quote_status", "disabled");
+
+                            if (quote_index > 0){
+                                document.getElementById("prev_selector").setAttribute("quote_status", "enabled");
+                            } 
+
+                            if (quote_index < quotes_list.length-1){
+                                document.getElementById("next_selector").setAttribute("quote_status", "enabled"); 
+                            }
+
+                            document.getElementById("selector_page_details").innerText = `Page ${(quote_index + 1)} of ${quotes_list.length}`;
+                            
+                        }
+                        catch(e){
+                            // the quotes can't be converted to JSON or the index can't be updated 
+                            // then set the index to 0 
+                            // return and don't go any further
+                            return;
+                        }
+                        
+
+                    }
+
+                    function updatePage(moveValue){
+                        quote_index = quote_index + moveValue;  //set index to plus or minus depending on prev/next
+                        if (quote_index < 0) quote_index = 0;   //set to zero if less that zero (first index)
+                        if (quote_index >= quotes_list.length) quote_index = quotes_list.length-1  //set to the end of the list if greater than that value
+                        getDisplayQuotes();
+                    }
+
+                    function getDisplayQuotes(){
+                        let quotes_string = localStorage.getItem("quotes_list");
+                        
+                        if (quotes_string === null) {
+                            getQuotes();
+                            return;
+                        }
+                    
+                        show_quotes(quotes_string);
+                        
+                    }
+                    
+                    function clearLocalCache(){
+                        // set local storage to null and then get values from the api
+                        localStorage.setItem("quotes_list", null);
+                        getQuotes();
+                    }
+
+                    getDisplayQuotes();
+                    
+                </script>
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+    <footer>Last updated 18/09/2026</footer>
+
+
+    <script src="./weekfourscript.js"></script>
+    <script src="./form_script.js"></script>
+
+</body>
+
+</html>

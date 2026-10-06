@@ -273,6 +273,18 @@ li:hover a {
     border-radius: 6px;
 }
 
+#halloween-button {
+    margin: 20px 50%;
+    padding: 10px;
+    border: 5px green solid;
+    background-color: white;
+    color: green;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    
+}
+
  
 @media (max-width: 930px) {
 
