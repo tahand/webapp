@@ -1,0 +1,133 @@
+<html data-bs-theme="halloween">
+
+<head>
+    <title>WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./six.css">
+
+
+</head>
+
+<body>
+
+    <div class="p-5 bg-primary text-white text-center">
+        <h1>Halloween mode in Bootstrap</h1>
+        <p></p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Quotes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Quotes"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mood">Mood recorder</a>
+                </li>
+            </ul>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="halloween_switch" name="halloween_switch" value="yes" checked>
+            <label class="form-check-label" for="mySwitch">halloween Mode</label>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>About Me</h2>
+                <p>I live in Sheffield with my wife and 6 year old boy.</p>
+            </div>
+            <div class="col-sm-8">
+                
+                <section id="mood_section">
+                <div class="card shadow-sm border-warning">
+                    <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
+                        <h2>Mood Recorder</h2>
+                    </div>
+                    <p class="m-3">Whats your current mood?</p>
+                    <div class="card-body">
+                            <form id="survey_form" action="">
+
+                        <div class="d-flex justify-content-between align-items-center my-4 mb-3">
+
+                            <div class="text-center">
+                                <div class=""></div>
+                                <small class="d-block mt-1 fw-semibold">Very Sad</small>
+                            </div>
+
+                            <div class="text-center">
+                                <div class=""></div>
+                                <small class="d-block mt-1 fw-semibold">Sad</small>
+                            </div>
+
+                            <div class="text-center">
+                                <div class=""></div>
+                                <small class="d-block mt-1 fw-semibold">Ok</small>
+                            </div>
+
+                            <div class="text-center">
+                                <div class=""></div>
+                                <small class="d-block mt-1 fw-semibold">Happy</small>
+                            </div>
+
+                            <div class="text-center">
+                                <div class=""></div>
+                                <small class="d-block mt-1 fw-semibold">Very Happy</small>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 px-2">
+                                <input type="range" name="mood_range" class="w-90 form-range" min="1" max="5" step="1" id="mood_range" value="3">
+                        </div>
+
+                    <button id="button_reset" type="reset">Reset</button>
+
+                    <input id="dynamic_form_submit" type="submit">
+
+                </form>
+
+                    </div>
+                    <hr width="100%">
+                    <div class="m-3">
+                        <p>Historic Moods</p>
+                        <div id="historic_moods_list"></div>    
+                        
+                    
+                    </div>
+                </div>
+                
+            </section>
+
+            <section id="quotes_section">
+                <h2>Quotes</h2>
+                <p id="quote-value"></p>
+                <span id="quote_author"></span>
+                <div id="quote-menu-options">
+                    <div id="quote-selector-container">
+                        <div id="prev_selector" quote_status="disabled" onclick="updatePage(-1);">Prev</div>
+                        <div id="selector_page_details"></div>
+                        <div id="next_selector" quote_status="disabled" onclick="updatePage(1)">Next</div>
+                    </div>
+                    <div id="clear-local-cache" onClick="clearLocalCache();">[Refresh]</div>
+                </div>
+
+            </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./six.js"></script>
+
+</body>
+
+</html>

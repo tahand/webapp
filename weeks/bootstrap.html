@@ -1,0 +1,1664 @@
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <title>WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+
+            $("#halloween-button").click(function () {
+                setTimeout(() => {
+                    $("body").css("background-color", "orange");
+                    $("p").css("color", "orange");
+                    $("li").css("background-color", "green");
+                    $("li").css("color", "white");
+                    $("li").css("padding", "5px");
+                    $("li a").css("color", "white");
+                    $(".tab-selector").css("color", "white");
+                    $(".tab-selector").css("background-color", "green");
+                    $("section").css("background-color", "white");
+                    $("section").css("color", "orange");
+                }, 100);
+
+            });
+
+            // let p = $("p");
+            // console.log(p);
+        }); 
+    </script>
+
+    <header>&nbsp;</header>
+
+    <div class="sidebar">
+        <ul id="navigation_menu">
+            <li><a href="../">Main Menu</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+
+        <h1></h1>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Column 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="form-review"></div>
+        <button id="halloween-button">Halloweeeeeeeen</button>
+        <div class="column-section-container">
+            <section id="javascript_dynamic_form">
+                <h2></h2>
+
+                <div class="container">
+                    <h1>My First Bootstrap Page</h1>
+                    <p>This part is inside a .container class.</p>
+                    <p>The .container class provides a responsive fixed width container.</p>
+                </div>
+
+                <div class="container p-5 my-5 border"></div>
+
+                <div class="container p-5 my-5 bg-dark text-white"></div>
+
+                <div class="container p-5 my-5 bg-primary text-white"></div>
+
+                <div class="container-sm">.container-sm</div>
+                <div class="container-md">.container-md</div>
+                <div class="container-lg">.container-lg</div>
+                <div class="container-xl">.container-xl</div>
+                <div class="container-xxl">.container-xxl</div>
+
+
+                <div class="row">
+                    <div class="col-*-*"></div>
+                    <div class="col-*-*"></div>
+                </div>
+                <div class="row">
+                    <div class="col-*-*"></div>
+                    <div class="col-*-*"></div>
+                    <div class="col-*-*"></div>
+                </div>
+
+                <!-- Or let Bootstrap automatically handle the layout -->
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+
+                <!-- 3 EQUAL COLUMNS -->
+                <div class="row">
+                    <div class="col">.col</div>
+                    <div class="col">.col</div>
+                    <div class="col">.col</div>
+                </div>
+
+                <!-- 2 unequal responsive columns -->
+                <div class="row">
+                    <div class="col-sm-4">.col-sm-4</div>
+                    <div class="col-sm-8">.col-sm-8</div>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" class="btn">Basic</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-link">Link</button>
+
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+                <button type="button" class="btn btn-outline-light text-dark">Light</button>
+
+                <button type="button" class="btn btn-primary btn-lg">Large</button>
+                <button type="button" class="btn btn-primary">Default</button>
+                <button type="button" class="btn btn-primary btn-sm">Small</button>
+
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary">Full-Width Button</button>
+                </div>
+
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Apple</button>
+                    <button type="button" class="btn btn-primary">Samsung</button>
+                    <button type="button" class="btn btn-primary">Sony</button>
+                </div>
+
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-primary">Apple</button>
+                    <button type="button" class="btn btn-primary">Samsung</button>
+                    <button type="button" class="btn btn-primary">Sony</button>
+                </div>
+
+                <span class="badge rounded-pill bg-primary">Primary</span>
+                <span class="badge rounded-pill bg-secondary">Secondary</span>
+                <span class="badge rounded-pill bg-success">Success</span>
+                <span class="badge rounded-pill bg-danger">Danger</span>
+                <span class="badge rounded-pill bg-warning">Warning</span>
+                <span class="badge rounded-pill bg-info">Info</span>
+                <span class="badge rounded-pill bg-light">Light</span>
+                <span class="badge rounded-pill bg-dark">Dark</span>
+
+
+                <button type="button" class="btn btn-primary">
+                    Messages <span class="badge bg-danger">4</span>
+                </button>
+
+                <span class="badge bg-primary">Primary</span>
+                <span class="badge bg-secondary">Secondary</span>
+                <span class="badge bg-success">Success</span>
+                <span class="badge bg-danger">Danger</span>
+                <span class="badge bg-warning">Warning</span>
+                <span class="badge bg-info">Info</span>
+                <span class="badge bg-light">Light</span>
+                <span class="badge bg-dark">Dark</span>
+
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:70%"></div>
+                </div>
+
+                <div class="progress" style="height:20px">
+                    <div class="progress-bar" style="width:40%;"></div>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:70%">70%</div>
+                </div>
+
+                <!-- Blue -->
+                <div class="progress">
+                    <div class="progress-bar" style="width:10%"></div>
+                </div>
+
+                <!-- Green -->
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width:20%"></div>
+                </div>
+
+                <!-- Turquoise -->
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width:30%"></div>
+                </div>
+
+                <!-- Orange -->
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width:40%"></div>
+                </div>
+
+                <!-- Red -->
+                <div class="progress">
+                    <div class="progress-bar bg-danger" style="width:50%"></div>
+                </div>
+
+                <!-- White -->
+                <div class="progress border">
+                    <div class="progress-bar bg-white" style="width:60%"></div>
+                </div>
+
+                <!-- Grey -->
+                <div class="progress">
+                    <div class="progress-bar bg-secondary" style="width:70%"></div>
+                </div>
+
+                <!-- Light Grey -->
+                <div class="progress border">
+                    <div class="progress-bar bg-light" style="width:80%"></div>
+                </div>
+
+                <!-- Dark Grey -->
+                <div class="progress">
+                    <div class="progress-bar bg-dark" style="width:90%"></div>
+                </div>
+
+                <div class="spinner-border"></div>
+
+                <div class="spinner-border text-muted"></div>
+                <div class="spinner-border text-primary"></div>
+                <div class="spinner-border text-success"></div>
+                <div class="spinner-border text-info"></div>
+                <div class="spinner-border text-warning"></div>
+                <div class="spinner-border text-danger"></div>
+                <div class="spinner-border text-secondary"></div>
+                <div class="spinner-border text-dark"></div>
+                <div class="spinner-border text-light"></div>
+
+                <div class="spinner-grow text-muted"></div>
+                <div class="spinner-grow text-primary"></div>
+                <div class="spinner-grow text-success"></div>
+                <div class="spinner-grow text-info"></div>
+                <div class="spinner-grow text-warning"></div>
+                <div class="spinner-grow text-danger"></div>
+                <div class="spinner-grow text-secondary"></div>
+                <div class="spinner-grow text-dark"></div>
+                <div class="spinner-grow text-light"></div>
+
+                <div class="spinner-border spinner-border-sm"></div>
+                <div class="spinner-grow spinner-grow-sm"></div>
+
+                <button class="btn btn-primary">
+                    <span class="spinner-border spinner-border-sm"></span>
+                </button>
+
+                <button class="btn btn-primary">
+                    <span class="spinner-border spinner-border-sm"></span>
+                    Loading..
+                </button>
+
+                <button class="btn btn-primary" disabled>
+                    <span class="spinner-border spinner-border-sm"></span>
+                    Loading..
+                </button>
+
+                <button class="btn btn-primary" disabled>
+                    <span class="spinner-grow spinner-grow-sm"></span>
+                    Loading..
+                </button>
+
+
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+
+
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+
+
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+
+
+                <ul class="pagination pagination-lg">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+
+                <ul class="pagination pagination-sm">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+
+                <!-- Default (left-aligned) -->
+                <ul class="pagination" style="margin:20px 0">
+                    <li class="page-item">...</li>
+                </ul>
+
+                <!-- Center-aligned -->
+                <ul class="pagination justify-content-center" style="margin:20px 0">
+                    <li class="page-item">...</li>
+                </ul>
+
+                <!-- Right-aligned -->
+                <ul class="pagination justify-content-end" style="margin:20px 0">
+                    <li class="page-item">...</li>
+                </ul>
+
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Photos</a></li>
+                    <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+                    <li class="breadcrumb-item"><a href="#">Italy</a></li>
+                    <li class="breadcrumb-item active">Rome</li>
+                </ul>
+
+                <ul class="list-group">
+                    <li class="list-group-item">First item</li>
+                    <li class="list-group-item">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                </ul>
+
+                <ul class="list-group">
+                    <li class="list-group-item active">Active item</li>
+                    <li class="list-group-item">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                </ul>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">First item</a>
+                    <a href="#" class="list-group-item list-group-item-action">Second item</a>
+                    <a href="#" class="list-group-item list-group-item-action">Third item</a>
+                </div>
+
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item disabled">Disabled item</a>
+                    <a href="#" class="list-group-item disabled">Disabled item</a>
+                    <a href="#" class="list-group-item">Third item</a>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">First item</li>
+                    <li class="list-group-item">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                    <li class="list-group-item">Fourth item</li>
+                </ul>
+
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">First item</li>
+                    <li class="list-group-item">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                </ol>
+
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">First item</li>
+                    <li class="list-group-item">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                    <li class="list-group-item">Fourth item</li>
+                </ul>
+
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Success item</li>
+                    <li class="list-group-item list-group-item-secondary">Secondary item</li>
+                    <li class="list-group-item list-group-item-info">Info item</li>
+                    <li class="list-group-item list-group-item-warning">Warning item</li>
+                    <li class="list-group-item list-group-item-danger">Danger item</li>
+                    <li class="list-group-item list-group-item-primary">Primary item</li>
+                    <li class="list-group-item list-group-item-dark">Dark item</li>
+                    <li class="list-group-item list-group-item-light">Light item</li>
+                </ul>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Action item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-success">Success item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Secondary
+                        item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info">Info item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Warning item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Light item</a>
+                </div>
+
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Inbox
+                        <span class="badge bg-primary rounded-pill">12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Ads
+                        <span class="badge bg-primary rounded-pill">50</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Junk
+                        <span class="badge bg-primary rounded-pill">99</span>
+                    </li>
+                </ul>
+
+                <div class="card">
+                    <div class="card-body">Basic card</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">Content</div>
+                    <div class="card-footer">Footer</div>
+                </div <div class="container mt-3">
+                <h2>Cards with Contextual Classes</h2>
+                <div class="card">
+                    <div class="card-body">Basic card</div>
+                </div>
+                <br>
+                <div class="card bg-primary text-white">
+                    <div class="card-body">Primary card</div>
+                </div>
+                <br>
+                <div class="card bg-success text-white">
+                    <div class="card-body">Success card</div>
+                </div>
+                <br>
+                <div class="card bg-info text-white">
+                    <div class="card-body">Info card</div>
+                </div>
+                <br>
+                <div class="card bg-warning text-white">
+                    <div class="card-body">Warning card</div>
+                </div>
+                <br>
+                <div class="card bg-danger text-white">
+                    <div class="card-body">Danger card</div>
+                </div>
+                <br>
+                <div class="card bg-secondary text-white">
+                    <div class="card-body">Secondary card</div>
+                </div>
+                <br>
+                <div class="card bg-dark text-white">
+                    <div class="card-body">Dark card</div>
+                </div>
+                <br>
+                <div class="card bg-light text-dark">
+                    <div class="card-body">Light card</div>
+                </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some example text. Some example text.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+
+        <div class="card" style="width:500px">
+            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+            <div class="card-img-overlay">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text.</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                <li><a class="dropdown-item" href="#">Link 3</a></li>
+            </ul>
+        </div>
+
+
+        <li>
+            <hr class="dropdown-divider">
+            </hr>
+        </li>
+
+        <li>
+            <h5 class="dropdown-header">Dropdown header 1</h5>
+        </li>
+
+        <li><a class="dropdown-item" href="#">Normal</a></li>
+        <li><a class="dropdown-item active" href="#">Active</a></li>
+        <li><a class="dropdown-item disabled" href="#">Disabled</a></li>
+
+        <div class="dropdown dropend">
+            Dropleft
+        </div>
+        <div class="dropdown dropstart"></div>
+
+        <div class="dropdown-menu dropdown-menu-end"></div>
+        <div class="dropup"></div>
+
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link 1</a></li>
+            <li><a class="dropdown-item" href="#">Link 2</a></li>
+            <li><a class="dropdown-item" href="#">Link 3</a></li>
+            <li><a class="dropdown-item-text" href="#">Text Link</a></li>
+            <li><span class="dropdown-item-text">Just Text</span></li>
+        </ul>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Tablet</a></li>
+                    <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Tablet</a></li>
+                    <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <button data-bs-toggle="collapse" data-bs-target="#demo">Collapsible</button>
+
+        <div id="demo" class="collapse">
+            Lorem ipsum dolor text....
+        </div>
+
+        <a href="#demo" data-bs-toggle="collapse">Collapsible</a>
+
+        <div id="demo" class="collapse">
+            Lorem ipsum dolor text....
+        </div>
+
+        <div id="demo" class="collapse show">
+            Lorem ipsum dolor text....
+        </div>
+
+
+        <div id="accordion">
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                        Collapsible Group Item #1
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum..
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                        Collapsible Group Item #2
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum..
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                        Collapsible Group Item #3
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum..
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+
+        <!-- Centered nav -->
+        <ul class="nav justify-content-center"></ul>
+
+        <!-- Right-aligned nav -->
+        <ul class="nav justify-content-end"></ul>
+        <ul class="nav flex-column"></ul>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+
+
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills nav-justified">..</ul>
+        <ul class="nav nav-tabs nav-justified">..</ul>
+
+
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane container active" id="home">...</div>
+            <div class="tab-pane container fade" id="menu1">...</div>
+            <div class="tab-pane container fade" id="menu2">...</div>
+        </div>
+
+
+        <!-- Nav pills -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="pill" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#menu1">Menu 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#menu2">Menu 2</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane container active" id="home">...</div>
+            <div class="tab-pane container fade" id="menu1">...</div>
+            <div class="tab-pane container fade" id="menu2">...</div>
+        </div>
+
+
+        <!-- A grey horizontal navbar that becomes vertical on small screens -->
+        <nav class="navbar navbar-expand-sm bg-light">
+
+            <div class="container-fluid">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <!-- A grey vertical navbar -->
+        <nav class="navbar bg-light">
+            ...
+        </nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+            ...
+        </nav>
+
+
+        <!-- Grey with black text -->
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Black background with white text -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">...</nav>
+
+        <!-- Blue background with white text -->
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">...</nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                </a>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <span class="navbar-text">Navbar text</span>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li>
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+            </ul>
+        </li>
+
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Link</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            ...
+        </nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+            ...
+        </nav>
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            ...
+        </nav>
+
+
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="la.jpg" alt="Los Angeles" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="chicago.jpg" alt="Chicago" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="ny.jpg" alt="New York" class="d-block w-100">
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+  <label class="form-check-label" for="mySwitch">Dark Mode</label>
+</div>
+
+        <div class="carousel-item">
+            <img src="la.jpg" alt="Los Angeles">
+            <div class="carousel-caption">
+                <h3>Los Angeles</h3>
+                <p>We had such a great time in LA!</p>
+            </div>
+        </div>
+
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Open modal
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Modal body..
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fading modal -->
+        <div class="modal fade"></div>
+
+        <!-- Modal without animation -->
+        <div class="modal"></div>
+
+        <div class="modal-dialog modal-sm"></div>
+
+        <div class="modal-dialog modal-lg"></div>
+        <div class="modal-dialog modal-xl"></div>
+        <div class="modal-dialog modal-fullscreen"></div>
+
+        <div class="modal-dialog modal-dialog-centered"></div>
+
+        <div class="modal-dialog"></div>
+
+        <div class="modal-dialog modal-dialog-scrollable"></div>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Hooray!">Hover over me!</button>
+
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        </script>
+
+
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Hooray!">Hover</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hooray!">Hover</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="Hooray!">Hover</a>
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Hooray!">Hover</a>
+
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Popover Header"
+            data-bs-content="Some content inside the popover">Toggle popover</button>
+
+        <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            })
+        </script>
+
+        <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="top" data-content="Content">Top</a>
+        <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="bottom" data-content="Content">Bottom</a>
+        <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="left" data-content="Content">Left</a>
+        <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="right" data-content="Content">Right</a>
+
+
+        <a href="#" title="Dismissible popover" data-bs-toggle="popover" data-bs-trigger="focus"
+            data-bs-content="Click anywhere in the document to close this popover">Click me</a>
+
+        <a href="#" title="Header" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Popover text">Hover
+            over me</a>
+
+        <div class="toast show">
+            <div class="toast-header">
+                Toast Header
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                Some text inside the toast body
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("toastbtn").onclick = function () {
+                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+                var toastList = toastElList.map(function (toastEl) {
+                    return new bootstrap.Toast(toastEl)
+                })
+                toastList.forEach(toast => toast.show())
+            }
+        </script>
+
+
+        <!-- The scrollable area -->
+
+        <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+            <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                ...
+                <ul class="navbar-nav">
+                    <li><a href="#section1">Section 1</a></li>
+                    ...
+            </nav>
+
+            <!-- Section 1 -->
+            <div id="section1">
+                <h1>Section 1</h1>
+                <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+            </div>
+
+
+
+            <!-- Offcanvas Sidebar -->
+            <div class="offcanvas offcanvas-start" id="demo">
+                <div class="offcanvas-header">
+                    <h1 class="offcanvas-title">Heading</h1>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>Some text lorem ipsum.</p>
+                    <p>Some text lorem ipsum.</p>
+                    <button class="btn btn-secondary" type="button">A Button</button>
+                </div>
+            </div>
+
+            <!-- Button to open the offcanvas sidebar -->
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                Open Offcanvas Sidebar
+            </button>
+
+            <div class="offcanvas offcanvas-end" id="demo"></div>
+
+            <!-- Responsive off canvas
+  -->
+            <div class="offcanvas offcanvas-start offcanvas-lg" id="demo"></div>
+
+
+            <div class="offcanvas offcanvas-end" id="demo">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+
+
+                <span class="rounded"></span>
+                <span class="rounded-top"></span>
+                <span class="rounded-end"></span>
+                <span class="rounded-bottom"></span>
+                <span class="rounded-start"></span>
+                <span class="rounded-circle"></span>
+                <span class="rounded-pill" style="width:130px"></span>
+                <span class="rounded-0"></span>
+                <span class="rounded-1"></span>
+                <span class="rounded-2"></span>
+                <span class="rounded-3"></span>
+                <span class="rounded-4"></span>
+                <span class="rounded-5"></span>
+
+
+                <div class="dropdown" data-bs-theme="dark"></div>
+
+                <!-- 
+                Alerts are created with the .alert class, followed by one of the contextual classes .alert-success, .alert-info, .alert-warning, .alert-danger, .alert-primary, .alert-secondary, .alert-light or .alert-dark:
+                -->
+                <img src="cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre">
+                <div class="alert alert-success">
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <p id="form_progress_text">&nbsp;</p>
+                <form id="dynamic_form" action="">
+
+                    <div id="form_tab_buttons"></div>
+
+                    <fieldset id="fieldset_1" tabName="Basic Details">
+                        <label for="fname">First name:</label>
+                        <input id="fname" maxlength="20" name="fname" type="text" placeholder="First name..." required>
+
+                        <label for="surname">Surname:</label>
+                        <input id="surname" maxlength="20" name="surname" type="text" placeholder="Surname..." required>
+                    </fieldset>
+
+                    <fieldset id="fieldset_2" tabName="Date of birth">
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" required>
+                    </fieldset>
+
+                    <fieldset id="fieldset_3" tabName="Email">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" maxlength="50" name="email" placeholder="Email..." required>
+                    </fieldset>
+
+                    <fieldset id="fieldset_4" tabName="Languages">
+                        <p>Whats your favourite language?</p>
+                        <input type="radio" id="html" name="fav_lang" value="HTML">
+                        <label for="html">HTML</label>
+                        <input type="radio" id="css" name="fav_lang" value="CSS">
+                        <label for="css">CSS</label>
+                        <input type="radio" id="javascript" name="fav_lang" value="Javascript">
+                        <label for="javascript">Javascript</label>
+                    </fieldset>
+
+                    <fieldset id="fieldset_5" tabName="Transport">
+                        <!--Next question-->
+                        <p>Which method of transport are available to you?</p>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1">Bike</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle1" value="Car">
+                        <label for="vehicle2">Car</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle1" value="Tram">
+                        <label for="vehicle3">Tram</label>
+                        <input type="checkbox" id="vehicle4" name="vehicle1" value="Bus">
+                        <label for="vehicle4">Bus</label>
+                    </fieldset>
+
+                    <fieldset id="fieldset_6" tabName="Drink">
+                        <p for="drinks">Which drink do you prefer when working:</p>
+                        <select id="drinks" name="drinks" required>
+                            <option value=""></option>
+                            <option value="Tea">Tea</option>
+                            <option value="Coffee">Coffee</option>
+                            <option value="Water">Water</option>
+                            <option value="Pop">Pop</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset id="fieldset_7" tabName="Browsers">
+                        <p>What browser are you using?</p>
+                        <input list="browsers" name="browsers" required>
+                        <datalist id="browsers">
+                            <option value="Edge">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+                    </fieldset>
+
+                    <fieldset id="fieldset_8" tabName="Comments">
+                        <p>Is there anything else you'd like to discuss?</p>
+                        <textarea id="further_comments" name="further_comments"></textarea>
+                    </fieldset>
+
+                    <button id="button_reset" type="reset">Reset</button>
+
+                    <input id="dynamic_form_submit" type="submit">
+
+                </form>
+
+                </section>
+
+                <section id="quotes_section">
+                    <h2>Quotes</h2>
+                    <p id="quote-value"></p>
+                    <span id="quote_author"></span>
+                    <div id="quote-menu-options">
+                        <div id="quote-selector-container">
+                            <div id="prev_selector" quote_status="disabled" onclick="updatePage(-1);">Prev</div>
+                            <div id="selector_page_details"></div>
+                            <div id="next_selector" quote_status="disabled" onclick="updatePage(1)">Next</div>
+                        </div>
+                        <div id="clear-local-cache" onClick="clearLocalCache();">[Refresh]</div>
+                    </div>
+                    <script>
+                        let quotes_list = [];
+                        let quote_index = 0;
+
+                        async function getQuotes() {
+
+                            await fetch("https://api.freeapi.app/api/v1/public/quotes/", {
+                                method: "get",
+                                headers: {
+                                    "Accept": "application/json"
+                                }
+                            })
+                                .then(async (response) => {
+                                    const result = await response.json();
+                                    quotes = result.data.data;
+                                    localStorage.setItem("quotes_list", JSON.stringify(quotes));
+                                    getDisplayQuotes();
+                                })
+                                .catch(e => console.log(e));
+
+                        }
+
+                        function show_quotes(quotes_string) {
+
+                            try {
+                                quotes_list = JSON.parse(quotes_string);
+
+                                const quote_text_object = document.getElementById("quote-value");
+                                const quote_author_object = document.getElementById("quote_author");
+
+                                quote_text_object.innerHTML = quotes_list[quote_index].content;
+                                quote_author_object.innerHTML = quotes_list[quote_index].author;
+
+                                // disable previous and next
+                                document.getElementById("prev_selector").setAttribute("quote_status", "disabled");
+                                document.getElementById("next_selector").setAttribute("quote_status", "disabled");
+
+                                if (quote_index > 0) {
+                                    document.getElementById("prev_selector").setAttribute("quote_status", "enabled");
+                                }
+
+                                if (quote_index < quotes_list.length - 1) {
+                                    document.getElementById("next_selector").setAttribute("quote_status", "enabled");
+                                }
+
+                                document.getElementById("selector_page_details").innerText = `Page ${(quote_index + 1)} of ${quotes_list.length}`;
+
+                            }
+                            catch (e) {
+                                // the quotes can't be converted to JSON or the index can't be updated 
+                                // then set the index to 0 
+                                // return and don't go any further
+                                return;
+                            }
+
+
+                        }
+
+                        function updatePage(moveValue) {
+                            quote_index = quote_index + moveValue;  //set index to plus or minus depending on prev/next
+                            if (quote_index < 0) quote_index = 0;   //set to zero if less that zero (first index)
+                            if (quote_index >= quotes_list.length) quote_index = quotes_list.length - 1  //set to the end of the list if greater than that value
+                            getDisplayQuotes();
+                        }
+
+                        function getDisplayQuotes() {
+                            let quotes_string = localStorage.getItem("quotes_list");
+
+                            if (quotes_string === null) {
+                                getQuotes();
+                                return;
+                            }
+
+                            show_quotes(quotes_string);
+
+                        }
+
+                        function clearLocalCache() {
+                            // set local storage to null and then get values from the api
+                            localStorage.setItem("quotes_list", null);
+                            getQuotes();
+                        }
+
+                        getDisplayQuotes();
+
+                    </script>
+
+                </section>
+
+
+            </div>
+
+
+            <div class="d-flex p-3 bg-secondary text-white">
+                <div class="p-2 bg-info">Flex item 1</div>
+                <div class="p-2 bg-warning">Flex item 2</div>
+                <div class="p-2 bg-primary">Flex item 3</div>
+            </div>
+
+
+            <div class="d-inline-flex p-3 bg-secondary text-white">
+                <div class="p-2 bg-info">Flex item 1</div>
+                <div class="p-2 bg-warning">Flex item 2</div>
+                <div class="p-2 bg-primary">Flex item 3</div>
+            </div>
+
+            <div class="d-flex flex-row bg-secondary">
+                <div class="p-2 bg-info">Flex item 1</div>
+                <div class="p-2 bg-warning">Flex item 2</div>
+                <div class="p-2 bg-primary">Flex item 3</div>
+            </div>
+
+            <div class="d-flex flex-row-reverse bg-secondary">
+                <div class="p-2 bg-info">Flex item 1</div>
+                <div class="p-2 bg-warning">Flex item 2</div>
+                <div class="p-2 bg-primary">Flex item 3</div>
+            </div>
+
+
+
+            <div class="d-flex flex-column">
+  <div class="p-2 bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary">Flex item 3</div>
+</div>
+
+<div class="d-flex flex-column-reverse">
+  <div class="p-2 bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary">Flex item 3</div>
+</div>
+
+<div class="d-flex justify-content-start">...</div>
+<div class="d-flex justify-content-end">...</div>
+<div class="d-flex justify-content-center">...</div>
+<div class="d-flex justify-content-between">...</div>
+<div class="d-flex justify-content-around">...</div>
+
+
+<div class="d-flex">
+  <div class="p-2 bg-info flex-fill">Flex item 1</div>
+  <div class="p-2 bg-warning flex-fill">Flex item 2</div>
+  <div class="p-2 bg-primary flex-fill">Flex item 3</div>
+</div>
+
+
+<div class="d-flex">
+  <div class="p-2 bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary flex-grow-1">Flex item 3</div>
+</div>
+
+
+<div class="d-flex bg-secondary">
+  <div class="p-2 bg-info order-3">Flex item 1</div>
+  <div class="p-2 bg-warning order-2">Flex item 2</div>
+  <div class="p-2 bg-primary order-1">Flex item 3</div>
+</div>
+
+
+<div class="d-flex bg-secondary">
+  <div class="p-2 ms-auto bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 bg-primary">Flex item 3</div>
+</div>
+
+<div class="d-flex bg-secondary">
+  <div class="p-2 bg-info">Flex item 1</div>
+  <div class="p-2 bg-warning">Flex item 2</div>
+  <div class="p-2 me-auto bg-primary">Flex item 3</div>
+</div>
+
+
+<div class="d-flex flex-wrap">..</div>
+
+<div class="d-flex flex-wrap-reverse">..</div>
+
+<div class="d-flex flex-nowrap">..</div>
+
+
+<div class="d-flex flex-wrap align-content-start">..</div>
+
+<div class="d-flex flex-wrap align-content-end">..</div>
+
+<div class="d-flex flex-wrap align-content-center">..</div>
+
+<div class="d-flex flex-wrap align-content-around">..</div>
+
+<div class="d-flex flex-wrap align-content-stretch">..</div>
+
+<div class="d-flex align-items-start">..</div>
+
+<div class="d-flex align-items-end">..</div>
+
+<div class="d-flex align-items-center">..</div>
+
+<div class="d-flex align-items-baseline">..</div>
+
+<div class="d-flex align-items-stretch">..</div>
+
+<div class="d-flex bg-light" style="height:150px">
+  <div class="p-2 border">Flex item 1</div>
+  <div class="p-2 border align-self-start">Flex item 2</div>
+  <div class="p-2 border">Flex item 3</div>
+</div>
+
+
+<form action="/action_page.php">
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+  </div>
+  <div class="form-check mb-3">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<label for="comment">Comments:</label>
+<textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+
+<form>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Enter email" name="email">
+    </div>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+    </div>
+  </div>
+</form>
+
+
+<input type="text" class="form-control form-control-lg" placeholder="Large input">
+<input type="text" class="form-control" placeholder="Normal input">
+<input type="text" class="form-control form-control-sm" placeholder="Small input">
+
+
+<input type="text" class="form-control" placeholder="Normal input">
+<input type="text" class="form-control" placeholder="Disabled input" disabled>
+<input type="text" class="form-control" placeholder="Readonly input" readonly>
+
+
+<input type="text" class="form-control-plaintext" placeholder="Plaintext input">
+<input type="text" class="form-control" placeholder="Normal input">
+
+<input type="color" class="form-control form-control-color" value="#CCCCCC">
+
+
+<select class="form-select">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+</select>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked>
+  <label class="form-check-label">Option 1</label>
+</div>
+
+<label for="customRange" class="form-label">Custom range</label>
+<input type="range" class="form-range" id="customRange">
+
+<input type="range" class="form-range" step="10">
+<input type="range" class="form-range" min="0" max="4">
+
+<form>
+  <div class="input-group">
+    <span class="input-group-text">@</span>
+    <input type="text" class="form-control" placeholder="Username">
+  </div>
+
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Your Email">
+    <span class="input-group-text">@example.com</span>
+  </div>
+</form>
+
+
+<div class="input-group mb-3 input-group-sm">
+   <span class="input-group-text">Small</span>
+  <input type="text" class="form-control">
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text">Default</span>
+  <input type="text" class="form-control">
+</div>
+
+<div class="input-group mb-3 input-group-lg">
+  <span class="input-group-text">Large</span>
+  <input type="text" class="form-control">
+</div>
+
+
+<!-- Multiple inputs -->
+<div class="input-group mb-3">
+  <span class="input-group-text">Person</span>
+  <input type="text" class="form-control" placeholder="First Name">
+  <input type="text" class="form-control" placeholder="Last Name">
+</div>
+
+<!-- Multiple addons / help text -->
+<div class="input-group mb-3">
+  <span class="input-group-text">One</span>
+  <span class="input-group-text">Two</span>
+  <span class="input-group-text">Three</span>
+  <input type="text" class="form-control">
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-text">
+    <input type="checkbox">
+  </div>
+  <input type="text" class="form-control" placeholder="Some text">
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-text">
+    <input type="radio">
+  </div>
+  <input type="text" class="form-control" placeholder="Some text">
+</div>
+
+<div class="input-group mb-3">
+  <button class="btn btn-outline-primary" type="button">Basic Button</button>
+  <input type="text" class="form-control" placeholder="Some text">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Search">
+  <button class="btn btn-success" type="submit">Go</button>
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Something clever..">
+  <button class="btn btn-primary" type="button">OK</button>
+  <button class="btn btn-danger" type="button">Cancel</button>
+</div>
+
+
+<div class="input-group mt-3 mb-3">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+  <input type="text" class="form-control" placeholder="Username">
+</div>
+
+
+    </div>
+
+    <footer>Last updated 18/09/2026</footer>
+
+
+    <script src="./weekfourscript.js"></script>
+    <script src="./form_script.js"></script>
+
+</body>
+
+</html>
