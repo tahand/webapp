@@ -1,14 +1,69 @@
-/* variables */
-
-
-/* styles */
-body {
-
+:root {
+    --primary: #223442;
+    --primary-color:#b3f0c0;
 }
 
-#schedule-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: dodgerblue;
-    padding: 10px;
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    color: var(--primary-color);
+}
+
+#img_logo {
+    width: 10vw;
+}
+
+@media (max-width:400px) {
+    #img_logo { display: none;}
+}
+
+
+header h1 { 
+    margin-left: 10px;
+}
+
+#clear_calendar {
+    background-color: var(--primary);
+    border-color: var(--primary-color);
+}
+
+#search_container {
+    align-content: end;
+}
+
+/* CSS for the hover over effect of the calendar item container */
+.calendar-item-container:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.weather-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 3px;
+}
+
+.weather-temp {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #004080;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.weather-date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #6c757d;
 }
